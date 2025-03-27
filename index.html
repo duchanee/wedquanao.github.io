@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội Thất Gỗ Cao Cấp Khánh Tưởng</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-running me-2"></i>Cửa Hàng Đồ Thể Thao
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang Chủ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+                            Sản Phẩm
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-category="all">Tất Cả Sản Phẩm</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" data-category="wardrobe">Giày thể thao</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="bed">Quần thể thao</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="studytable">Áo thể thao</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="tvstand">Phụ kiện</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Liên Hệ</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#cart" class="btn btn-outline-light me-2 position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+                    </a>
+                    <a href="admin.html" class="btn btn-outline-light">
+                        <i class="fas fa-user-cog"></i> Admin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="hero-content text-white">
+                <h1 class="display-4 fw-bold mb-4">Đồ thể thao cao cấp</h1>
+                <p class="lead mb-4">Tinh tế - Bền đẹp - Sang trọng</p>
+                <a href="#products" class="btn btn-primary btn-lg px-4">Khám Phá Ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Danh Mục Nổi Bật</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <a href="#" class="category-card" data-category="bedroom">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="aothethao.jpg" class="card-img-top" alt="Phòng ngủ">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Áo thể thao</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" class="category-card" data-category="livingroom">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="quanthethao.jpg" class="card-img-top" alt="Phòng khách">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Quần thể thao</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" class="category-card" data-category="diningroom">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="giaythethao.jpg" class="card-img-top" alt="Phòng ăn">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Giày thể thao</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" class="category-card" data-category="office">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="Screenshot 2025-03-27 205735.png" class="card-img-top" alt="Văn phòng">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Phụ kiện</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="section-title">Sản Phẩm Mới Nhất</h2>
+                <div class="d-flex">
+                    <div class="input-group me-3" style="width: 250px;">
+                        <input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="btn btn-outline-secondary" type="button" id="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <select class="form-select" id="sort-select" style="width: 180px;">
+                        <option value="default">Sắp xếp</option>
+                        <option value="price-asc">Giá: Thấp đến cao</option>
+                        <option value="price-desc">Giá: Cao đến thấp</option>
+                        <option value="name-asc">Tên: A-Z</option>
+                        <option value="name-desc">Tên: Z-A</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row" id="product-list">
+                <!-- Sản phẩm sẽ được thêm động bằng JavaScript -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="Banner-Blog.jpg" alt="Về chúng tôi" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Về Đồ Thể Thao</h2>
+                    <p class="lead">Chúng tôi tự hào là đơn vị cung cấp đồ thể thao cao cấp hàng đầu Việt Nam.</p>
+                    <p>Với hơn 15 năm kinh nghiệm trong lĩnh vực sản xuất đồ thể thao, chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng cao với thiết kế tinh tế.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Bảo hành 5 năm</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Thiết kế độc quyền</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Giao hàng & lắp đặt tận nơi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Giỏ Hàng Của Bạn</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th width="40%">Sản Phẩm</th>
+                            <th>Đơn Giá</th>
+                            <th width="120px">Số Lượng</th>
+                            <th>Thành Tiền</th>
+                            <th width="50px"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <tr>
+                            <td colspan="5" class="text-center py-4">Giỏ hàng của bạn đang trống</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-end fw-bold">Tổng Cộng:</td>
+                            <td id="cart-total" class="fw-bold">0 VNĐ</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="d-flex justify-content-end mt-3">
+                <button class="btn btn-outline-secondary me-2" id="continue-shopping">Tiếp Tục Mua Sắm</button>
+                <button class="btn btn-success" id="checkout-btn">Thanh Toán</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Liên Hệ Với Chúng Tôi</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Thông Tin Liên Hệ</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                    <strong>Địa chỉ:</strong> số 1 đa sỹ,kiến hưng, Hà Đông, Hà Nội
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-phone-alt text-primary me-2"></i>
+                                    <strong>Điện thoại:</strong> 0345 506 306
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-envelope text-primary me-2"></i>
+                                    <strong>Email:</strong> leducha06@gmail.com
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-clock text-primary me-2"></i>
+                                    <strong>Giờ làm việc:</strong> 8:00 - 17:30 (Thứ 2 - Thứ 7)
+                                </li>
+                            </ul>
+                            <div class="social-icons mt-4">
+                                <a href="#" class="text-decoration-none me-3">
+                                    <i class="fab fa-facebook-f fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none me-3">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none me-3">
+                                    <i class="fab fa-youtube fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none">
+                                    <i class="fab fa-zalo fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Gửi Tin Nhắn</h5>
+                            <form id="contact-form">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Họ và tên" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="Số điện thoại">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Nội dung" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Gửi Tin Nhắn</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Đồ thể thao</h5>
+                    <p>Chuyên cung cấp các sản phẩm đồ thể thao cao cấp, chất lượng với giá thành hợp lý.</p>
+                    <p><i class="fas fa-copyright me-2"></i>2025 Bản quyền thuộc về Đồ thể thao</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Liên Kết</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Trang Chủ</a></li>
+                        <li class="mb-2"><a href="#products" class="text-white text-decoration-none">Sản Phẩm</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">Giới Thiệu</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-3">Chính Sách</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Bảo Hành</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Đổi Trả</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Vận Chuyển</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Bảo Mật</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Đăng Ký Nhận Tin</h5>
+                    <p>Nhận thông tin khuyến mãi và sản phẩm mới nhất.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email của bạn">
+                            <button class="btn btn-primary" type="button">Đăng Ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
